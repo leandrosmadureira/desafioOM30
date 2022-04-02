@@ -49,4 +49,14 @@ class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    public function setPage($paginaConteudo, $data = NULL){
+        $data['titulo'] = '';
+        if(isset($data['subtitulo'])){ 
+          $data['titulo'] = $data['subtitulo']." - ".$data['titulo'];                
+        }
+        echo view('default/head', $data);
+        echo view($paginaConteudo);
+        echo view('default/footer', $data);
+    }
 }
