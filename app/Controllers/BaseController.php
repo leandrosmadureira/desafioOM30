@@ -50,8 +50,8 @@ class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
     }
 
-    public function setPage($paginaConteudo, $data = NULL){
-        $data['titulo'] = '';
+    public function setPage($titulo, $paginaConteudo, $data = NULL){
+        $data['titulo'] = $titulo;
         if(isset($data['subtitulo'])){ 
           $data['titulo'] = $data['subtitulo']." - ".$data['titulo'];                
         }

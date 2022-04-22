@@ -10,8 +10,8 @@ class LoginCtrl extends BaseController
 {
     public function index()
     {
-        $data['msg'] = password_hash('123',PASSWORD_DEFAULT);
-        return view('login/login', $data);
+        //$data['msg'] = password_hash('123',PASSWORD_DEFAULT);
+        return view('login/login');
     }
 
     public function signIn(){
@@ -39,6 +39,28 @@ class LoginCtrl extends BaseController
             session()->setFlashData('msg','Usuário ou senha inválidos!');
             return redirect()->to('loginctrl');
         }
+    }
+
+    public function store(){
+        $permissao = true;
+        if($permissao){
+            $userModel = model(User::class);
+            $user = ((session('cd_usuario'))?session('cd_usuario'):session('cd_usuario'));
+            $filtros = new stdClass();
+            $filtros->password01 = null;
+            $filtros->password02 = null;
+            
+            $data = [
+                        'msg' => null,
+                        'filtros' => $filtros,
+                        'msg_erro' => null,
+                        'login' => $userModel->find($user)
+                    ];
+            //dd($data);exit;
+            return $this->setPage('Altera Senha','login/loginEdit',$data);
+        } else {
+            return $this->setPage('Acesso Negado','default/acessonegado');
+            }
     }
 
     public function signOut(){

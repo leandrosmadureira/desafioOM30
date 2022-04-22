@@ -8,6 +8,6 @@ class HomeCtrl extends BaseController
 {
     public function index()
     {
-        return $this->setPage('default/home');
+        return $this->setPage('Home','default/home');
     }
 }

@@ -19,7 +19,7 @@ $ultimo_acesso = session('ultimo_acesso');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/icons/ambulancia.png">
-    <title>Cadastro de Paciente|</title>
+    <title>Cadastro de Paciente|<?=$titulo?></title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -128,7 +128,7 @@ $ultimo_acesso = session('ultimo_acesso');
                                 <li><a><i class="fa fa-edit"></i>Cadastro <span
                                             class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="{{ route('pac.index') }}">Paciente</a></li>
+                                        <li><a href="<?= route_to('pac.index') ?>">Paciente</a></li>
                                         <li><a href="{{route('user.index')}}">Usuário</a></li>
                                     </ul>
                                 </li>
@@ -182,7 +182,7 @@ $ultimo_acesso = session('ultimo_acesso');
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('login.show') }}"> Alterar Senha</a>
+                                    <a class="dropdown-item" href="<?= route_to('edit.user')?>"> Alterar Senha</a>
                                     <a class="dropdown-item" href="<?= route_to('signout') ?>"><i
                                             class="fa fa-sign-out pull-right"></i> Log Out</a>
                                 </div>

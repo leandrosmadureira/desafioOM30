@@ -7,7 +7,10 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "codeigniter4/framework": "^4",
-        "codeigniter4/translations": "^4.1"
+        "codeigniter4/translations": "^4.1",
+        "twbs/bootstrap": "^5.1",
+        "components/font-awesome": "^6.1",
+        "jpuck/php-bootstrap-progress-bar": "^1.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",

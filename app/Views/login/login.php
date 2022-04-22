@@ -14,7 +14,7 @@
     <meta name="generator" content="Hugo 0.83.1">
     <title>Cadastro de Paciente</title>
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.min2.css" rel="stylesheet">
 

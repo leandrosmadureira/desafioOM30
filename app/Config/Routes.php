@@ -35,6 +35,10 @@ $routes->get('/', 'LoginCtrl::index', ['as' => 'login']);
 $routes->get('SignOut', 'LoginCtrl::signOut', ['as' => 'signout']);
 $routes->get('Home', 'HomeCtrl::index', ['as' => 'home']);
 
+$routes->get('EditUsuario','LoginCtrl::store',['as' => 'edit.user']);
+
+$routes->get('Paciente','PatientCtrl::index',['as' => 'pac.index']);
+
 //$routes->get('/', 'Home::index');
 
 /*

@@ -8,6 +8,7 @@ class AddUsers extends Migration
 {
     public function up()
     {
+        $this->forge->createDatabase('desafioom30', true);
         $this->forge->addField([
             'users_id'          => [
                 'type'           => 'INT',
